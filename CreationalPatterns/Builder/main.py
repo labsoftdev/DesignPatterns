@@ -1,8 +1,13 @@
+"""This module contains example of Builder design pattern"""
+
 from concrete_builder import ConcreteBuilder
 from director import Director
 
 
 def main() -> None:
+    """
+    Construct a product using the Builder design pattern.
+    """
     builder = ConcreteBuilder()
     director = Director(builder)
     director.construct()
