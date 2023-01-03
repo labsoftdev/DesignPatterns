@@ -20,6 +20,6 @@ Define an interface for creating an object, but let subclasses decide which clas
 - **Product**: defines a product object to be created by the corresponding concrete factory, implements the AbstractProduct interface.
 
 ## Related Design Patterns
-AbstractFactory classes are often implemented with factory methods (Factory
-Method Design Pattern), but they can also be implemented using Prototype Design Pattern.
-A concrete factory is often a singleton (Singleton Design Pattern).
+AbstractFactory classes are often implemented with factory methods (***Factory Method***),
+but they can also be implemented using ***Prototype***.
+A concrete factory is often a singleton (***Singleton***).
