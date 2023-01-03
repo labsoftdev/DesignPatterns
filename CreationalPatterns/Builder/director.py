@@ -14,3 +14,7 @@ class Director:
         self._builder.build_part_a()
         self._builder.build_part_b()
         self._builder.build_part_c()
+
+    def get_builder(self):
+        """Returns the builder that has been constructed."""
+        return self._builder
