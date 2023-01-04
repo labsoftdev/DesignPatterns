@@ -1,6 +1,5 @@
 """This module contains implementation and example of Singleton design pattern"""
 
-
 class Singleton:
     """
     A class that ensures that only one instance of itself can be created.
