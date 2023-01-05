@@ -22,6 +22,31 @@ This allows you to add new types of objects easily by simply creating a new subc
 - **Creator**: Declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object.
 May call the factory method to create a Product object.
 - **ConcreteCreator**: Overrides the factory method to return an instance of a ConcreteProduct.
+'''plantuml
+@startuml 
+
+abstract class Creator {
+  - factory_method()
+}
+
+abstract class Product {
+  - operation()
+}
+
+class ConcreteCreator {
+  + factory_method()
+}
+
+class ConcreteProduct {
+  + operation()
+}
+
+Client -down-> Creator: create creator object
+Creator ---> Product: create product object
+Client <-- Product: product objectS
+Client --> Product: use product
+@enduml
+
 
 ## Related Design Patterns
 ***Abstract Factory*** is often implemented with factory methods. The Motivation
