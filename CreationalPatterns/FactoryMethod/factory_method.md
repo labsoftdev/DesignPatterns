@@ -16,37 +16,44 @@ In the factory method design pattern, the super class defines a factory method t
 
 This allows you to add new types of objects easily by simply creating a new subclass that provides an implementation for the object. The factory class does not need to be modified, as it relies on the subclasses to provide the implementation for the objects that it creates.
 
+## Structure
+```plantuml
+@startuml factory_method
+!theme mars
+abstract class  Creator {
+    {abstract} -factory_method()
+}
+
+
+abstract class Product {
+    {abstract} -operation()
+}
+
+class ConcreteProduct {
+    +operation()
+}
+
+class ConcreteCreator {
+    +factory_method()
+}
+
+Creator <|.. ConcreteCreator : Extends
+Product <|.. ConcreteProduct : Extends
+ConcreteCreator -> ConcreteProduct : Create 
+note left of ConcreteCreator : return new ConcreteProduct
+note left of Creator : product = FactoryMethod()
+
+
+@enduml
+```
+
+
 ## Participants
 - **Product**: Defines the interface of objects the factory method creates.
 - **ConcreteProduct**: Implements the Product interface.
 - **Creator**: Declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object.
 May call the factory method to create a Product object.
 - **ConcreteCreator**: Overrides the factory method to return an instance of a ConcreteProduct.
-
-@startuml 
-
-abstract class Creator {
-  - factory_method()
-}
-
-abstract class Product {
-  - operation()
-}
-
-class ConcreteCreator {
-  + factory_method()
-}
-
-class ConcreteProduct {
-  + operation()
-}
-
-Client -down-> Creator: create creator object
-Creator ---> Product: create product object
-Client <-- Product: product objectS
-Client --> Product: use product
-@enduml
-
 
 ## Related Design Patterns
 ***Abstract Factory*** is often implemented with factory methods. The Motivation
