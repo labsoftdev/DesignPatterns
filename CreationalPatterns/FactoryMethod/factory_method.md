@@ -18,34 +18,30 @@ This allows you to add new types of objects easily by simply creating a new subc
 
 ## Structure
 
-```plantuml
-@startuml factory_method
-!theme mars
-abstract class  Creator {
-    {abstract} -factory_method()
-}
+```mermaid
+classDiagram
+
+    class  Creator {
+       -factory_method()
+    }
 
 
-abstract class Product {
-    {abstract} -operation()
-}
+    class Product {
+        -operation()
+    }
 
-class ConcreteProduct {
-    +operation()
-}
+    class ConcreteProduct {
+        +operation()
+    }
 
-class ConcreteCreator {
-    +factory_method()
-}
+    class ConcreteCreator {
+        +factory_method()
+    }
 
-Creator <|.. ConcreteCreator : Extends
-Product <|.. ConcreteProduct : Extends
-ConcreteCreator -> ConcreteProduct : Create 
-note left of ConcreteCreator : return new ConcreteProduct
-note left of Creator : product = FactoryMethod()
+    Creator <|.. ConcreteCreator : Extends
+    Product <|.. ConcreteProduct : Extends
+    ConcreteCreator --> ConcreteProduct : Create 
 
-
-@enduml
 ```
 
 ## Participants
