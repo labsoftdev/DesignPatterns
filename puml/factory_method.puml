@@ -1,0 +1,28 @@
+@startuml factory_method
+
+
+abstract class  Creator {
+    {abstract} -factory_method()
+}
+
+
+abstract class Product {
+    {abstract} -operation()
+}
+
+class ConcreteProduct {
+    +operation()
+}
+
+class ConcreteCreator {
+    +factory_method()
+}
+
+Creator <|.. ConcreteCreator : Extends
+Product <|.. ConcreteProduct : Extends
+ConcreteCreator -> ConcreteProduct : Create 
+note left of ConcreteCreator : return new ConcreteProduct
+note left of Creator : product = FactoryMethod()
+
+
+@enduml
