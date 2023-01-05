@@ -18,7 +18,7 @@ This allows you to add new types of objects easily by simply creating a new subc
 
 ## Structure
 
-![FactoryMethod](../../svg//factory_method.svg)
+![FactoryMethod](../../puml/svg/factory_method.svg)
 
 ## Participants
 - **Product**: Defines the interface of objects the factory method creates.
