@@ -1,0 +1,25 @@
+@startuml builder
+
+class Director {
+    +Construct() 
+}
+
+class Builder {
+    +BuildPart()
+}
+
+class ConcreteBuilder {
+    +BuildPart()
+    +GetProduct()
+}
+
+class Product {
+}
+
+Director -right-> Builder
+ConcreteBuilder -up-|> Builder
+Product <.left. ConcreteBuilder
+
+note bottom of Director : for all object in structure { builder.BuildPart() }
+      
+@enduml

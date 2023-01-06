@@ -14,6 +14,11 @@ This allows the same construction process to be used to create different represe
 
 By using the Builder design pattern, you can create complex objects in a flexible and reusable way, without the need to specify all of the details of the object's representation in a single constructor.
 
+
+## Structure
+
+![Builder](../../puml/svg/builder.svg)
+
 ## Participants
 - **Director**: Constructs an object using the Builder interface.
 - **Builder**: Specifies an abstract interface for creating parts of a Product object.
