@@ -1,0 +1,55 @@
+@startuml abstract_factory
+allowmixing
+
+abstract class AbstractFactory {
+  {abstract} +create_product_a()
+  {abstract} +create_product_b()
+}
+
+class ConcreteFactory1 {
+  +create_product_a()
+  +create_product_b()
+}
+
+class ConcreteFactory2 {
+  +create_product_a()
+  +create_product_b()
+}
+
+abstract class AbstractProductA {
+}
+
+abstract class AbstractProductB {
+}
+
+class ConcreteProductA1 {
+}
+
+class ConcreteProductA2 {
+}
+
+class ConcreteProductB1 {
+}
+
+class ConcreteProductB2 {
+}
+
+
+
+rectangle Client
+
+Client --> AbstractFactory
+Client --> AbstractProductA
+Client --> AbstractProductB
+
+AbstractFactory <|-down- ConcreteFactory1
+AbstractFactory <|-down- ConcreteFactory2
+AbstractProductA <|-down- ConcreteProductA1
+AbstractProductA <|-down- ConcreteProductA2
+AbstractProductB <|-down- ConcreteProductB1
+AbstractProductB <|-down- ConcreteProductB2
+ConcreteFactory1 .right.> ConcreteProductA1
+ConcreteFactory1 .left.> ConcreteProductB1
+ConcreteFactory2 .right.> ConcreteProductA2
+ConcreteFactory2 .left.> ConcreteProductB2
+@enduml
