@@ -18,6 +18,10 @@ This allows the same object creation code to be used to create different represe
 
 By using the Prototype design pattern, you can create complex objects in a flexible and reusable way, without the need to specify all of the details of the object's representation in a single constructor.
 
+## Structure
+
+![Prototype](../../puml/svg/prototype.svg)
+
 ## Participants
 
 - **Prototype**: Declares an interface for cloning itself.
