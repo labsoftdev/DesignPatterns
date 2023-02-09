@@ -1,7 +1,7 @@
 """This module contains concrete implementations of Creator"""
 
 from creator import Creator
-from concrete_products import ConcreteProductA, ConcreteProductB
+from concrete_product import ConcreteProductA, ConcreteProductB
 
 
 class ConcreteCreator(Creator):
