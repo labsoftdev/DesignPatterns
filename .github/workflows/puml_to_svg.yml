@@ -35,8 +35,4 @@ jobs:
           java -jar plantuml.jar -tsvg "$file" -o "puml/svg/${filename##*/}.svg"
         done
 
-    - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "Export puml to svg [skip ci]"
-        push: true
+   

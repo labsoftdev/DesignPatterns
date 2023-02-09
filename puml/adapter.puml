@@ -17,5 +17,5 @@ object Adapter {
 Client -> Target
 Target <|-down- Adapter
 Adaptee <-- Adapter : adaptee
-note right of Adapter : adaptee.specific_request()
+note right of Adapter :  adaptee.specific_request()
 @enduml
