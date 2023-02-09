@@ -1,0 +1,20 @@
+@startuml adapter
+object Target {
+  +request()
+}
+
+object Client {
+}
+
+object Adaptee {
+  +specificRequest()
+}
+
+object Adapter {
+  +request()
+}
+
+Client -> Target
+Target <|-down- Adapter
+Adaptee <-- Adapter : adaptee
+@enduml

@@ -15,7 +15,7 @@ The Adapter design pattern is a structural pattern that allows objects with inco
 Create a wrapper class that can be used by the client class as if it were the original class. The adapter class implements the required interface and translates calls from the client to the original class.
 
 ## Structure
-Adapter Design Pattern
+![Adapter](../../puml/svg/adapter.svg)
 
 ## Participants
 - **Target**: defines the domain-specific interface that Client uses.
