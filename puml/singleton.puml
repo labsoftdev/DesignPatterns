@@ -1,0 +1,8 @@
+@startuml singleton
+class Singleton {
+    + __new__(cls, *args, **kwargs)
+}
+
+note right of Singleton : return uniqueInstance
+
+@enduml

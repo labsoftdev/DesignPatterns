@@ -1,0 +1,27 @@
+@startuml prototype
+
+interface Prototype {
+    + clone(): 
+}
+
+class ConcretePrototype1 {
+    + clone(): 
+}
+
+class ConcretePrototype2 {
+    + clone(): 
+}
+
+class Client{
+    + operation()
+}
+
+Client -right-> Prototype
+Prototype <|-- ConcretePrototype1
+Prototype <|-- ConcretePrototype2
+
+note bottom of ConcretePrototype1 : return copy of self
+note bottom of ConcretePrototype2 : return copy of self
+note bottom of Client : p = prototype.clone()
+
+@enduml

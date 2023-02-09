@@ -16,6 +16,10 @@ In the factory method design pattern, the super class defines a factory method t
 
 This allows you to add new types of objects easily by simply creating a new subclass that provides an implementation for the object. The factory class does not need to be modified, as it relies on the subclasses to provide the implementation for the objects that it creates.
 
+## Structure
+
+![FactoryMethod](../../puml/svg/factory_method.svg)
+
 ## Participants
 - **Product**: Defines the interface of objects the factory method creates.
 - **ConcreteProduct**: Implements the Product interface.

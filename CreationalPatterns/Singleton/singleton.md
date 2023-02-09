@@ -12,6 +12,11 @@ The Singleton design pattern solves this problem by ensuring that the class can 
 
 By using the Singleton design pattern, you can ensure that a class has only one instance and provide a global access point to it, while still maintaining control over when the instance is created.
 
+
+## Structure
+
+![Prototype](../../puml/svg/singleton.svg)
+
 ## Participants
 - **Singleton**: Defines the special method that is responsible for creating the instance and ensuring that it is only called once. The instance is stored in a private static variable, and the special method is made public and static so that it can be accessed from anywhere in the code.
 

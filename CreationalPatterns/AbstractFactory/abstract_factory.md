@@ -13,6 +13,10 @@ The Abstract Factory is a creational design pattern that provides an interface f
 ## Solution
 Define an interface for creating an object, but let subclasses decide which class to instantiate. The factory method lets a class defer instantiation to subclasses.
 
+## Structure
+
+![AbstractFactory](../../puml/svg/abstract_factory.svg)
+
 ## Participants
 - **AbstractFactory**: declares an interface for operations that create abstract product objects.
 - **ConcreteFactory**: implements the operations to create concrete product objects.
