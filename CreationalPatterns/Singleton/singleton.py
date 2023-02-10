@@ -15,4 +15,5 @@ class Singleton:
         return cls._instance
 
     def operation(self):
+        """Simple method"""
         return "Singleton operation"
