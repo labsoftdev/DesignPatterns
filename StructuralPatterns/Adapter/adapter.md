@@ -24,4 +24,10 @@ Create a wrapper class that can be used by the client class as if it were the or
 - **Adapter**: adapts the interface of Adaptee to the Target interface.
   
 ## Related Design Patterns
-The Adapter design pattern is often used in combination with the Facade and Composite patterns.
+- ***Bridge*** has a structure similar to an object adapter, but Bridge has a different
+intent: It is meant to separate an interface from its implementation so that they can
+be varied easily and independently. An adapter is meant to change the interface
+of an existing object.
+- ***Decorator*** enhances another object without changing its interface. A decorator is thus more transparent to the application than an adapter is. As a consequence, Decorator supports recursive composition, which isn't possible with pureadapters.
+- ***Proxy*** defines a representative or surrogate for another object and does not
+change its interface.
