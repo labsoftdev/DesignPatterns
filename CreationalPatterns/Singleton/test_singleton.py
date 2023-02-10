@@ -9,14 +9,14 @@ class TestSingleton(unittest.TestCase):
 
     def test_should_be_same_instance(self):
         """Test that objects are the same instance"""
-        x = Singleton()
-        y = Singleton()
-        self.assertIs(x, y)
+        _x = Singleton()
+        _y = Singleton()
+        self.assertIs(_x, _y)
 
     def test_shuld_return_result_of_operation(self):
         """Test operation return"""
-        x = Singleton()
-        self.assertEqual(x.operation(), "Singleton operation")
+        _x = Singleton()
+        self.assertEqual(_x.operation(), "Singleton operation")
 
 
 if __name__ == "__main__":
