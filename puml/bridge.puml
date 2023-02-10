@@ -1,0 +1,27 @@
+@startuml bridge
+object Abstraction {
+  -implementor: Implementor
+  +operation(): 
+}
+
+object RefinedAbstraction {
+  +operation(): 
+}
+
+object Implementor {
+  +operationImp(): 
+}
+
+object ConcreteImplementorA {
+  +operationImp(): 
+}
+
+object ConcreteImplementorB {
+  +operationImp(): 
+}
+
+Abstraction <|-- RefinedAbstraction
+Abstraction o-right-> Implementor : imp
+Implementor <|-- ConcreteImplementorA
+Implementor <|-down- ConcreteImplementorB
+@enduml
